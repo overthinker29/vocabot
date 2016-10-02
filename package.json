@@ -1,0 +1,28 @@
+{
+  "name": "Vocab-bot",
+  "version": "1.0.0",
+  "description": "This is a facebook messenger bot to learn new words",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/overthinker29/vocab-bot"
+  },
+  "keywords": [
+    "vocab",
+    "facebook",
+    "messenger",
+    "bot"
+  ],
+  "author": "Vaibhav Nachankar",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.14.0",
+    "requests": "~0.1.7",
+    "mongoose": "~4.5.8",
+    "sync-request": "~2.2.0"
+  }
+}
