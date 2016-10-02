@@ -4,8 +4,8 @@ var bodyParser = require('body-parser')
 var request = require('request')
 var words = require('./words')
 var app = express()
-var token = "EAAPZBXjOvZBmwBAMPkIKvyfxfPcY1ct4a8WnZBvB4hlLbWzLGaTdZBcZCqYZCbyeiUfDEY2Go77uI0UeXxBRap3JNb5sI43H77TOtIdbZABabgpN0VfTGXukV321ZAPwBDFi82imo2Nk2YjVmfgrZBPE74c0kLS5GVGymXVeVTmv8qAZDZD"
-
+//var token = "EAAPZBXjOvZBmwBAMPkIKvyfxfPcY1ct4a8WnZBvB4hlLbWzLGaTdZBcZCqYZCbyeiUfDEY2Go77uI0UeXxBRap3JNb5sI43H77TOtIdbZABabgpN0VfTGXukV321ZAPwBDFi82imo2Nk2YjVmfgrZBPE74c0kLS5GVGymXVeVTmv8qAZDZD"
+var token = "EAAPZBXjOvZBmwBAHmK8fjjFnVsIury78jZA5ZBRfXHiYsBW4d25weKRFeaMa9uxLYVPnhxrDUgvQZCTwuZAGU4uw3pcid1CNZAheqGsoXth1eDoJR4SZAC4yu9ExXME9tv2znouBYnijGmfpYuTYuSDzk29Y4fxLpCf4l5mmy4zFUQZDZD"
 
 app.set('port', (process.env.PORT || 3001))
 
@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 })
 
 // for Facebook verification
-app.get('/webhook1/', function (req, res) {
+app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
         res.send(req.query['hub.challenge'])
     }
