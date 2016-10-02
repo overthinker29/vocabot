@@ -11267,7 +11267,7 @@ var wordList =[
 words = [];
 var request = require('sync-request');
 for(var key in wordList){
-    if(key<=2300){continue}
+    if(key<=2600){continue}
     var url = "http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q="+wordList[key]['word'];
 	
 	var res = request('GET', url);
@@ -11284,7 +11284,7 @@ for(var key in wordList){
     dict['def'] = wordList[key]['def']
     dict['images'] = op
     words.push(dict)
-    if(key>2600){
+    if(key>2900){
 		console.log("````````````````````````````````````````````````````````")
 		console.log(words)
 		console.log("````````````````````````````````````````````````````````")
@@ -11294,32 +11294,3 @@ for(var key in wordList){
     	console.log(key+" - "+wordList[key]['word']+" - "+op.length)
     }
 }
-
-
-// curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=EAAPZBXjOvZBmwBAHmK8fjjFnVsIury78jZA5ZBRfXHiYsBW4d25weKRFeaMa9uxLYVPnhxrDUgvQZCTwuZAGU4uw3pcid1CNZAheqGsoXth1eDoJR4SZAC4yu9ExXME9tv2znouBYnijGmfpYuTYuSDzk29Y4fxLpCf4l5mmy4zFUQZDZD"
-
-// curl -X POST -H "Content-Type: application/json" -d '{                                                                                                                              "setting_type":"call_to_actions",
-//   "thread_state":"new_thread",
-//   "call_to_actions":[
-//     {
-//       "payload":"FIRST_MESSAGE"
-//     }
-//   ]
-// }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAPZBXjOvZBmwBAHmK8fjjFnVsIury78jZA5ZBRfXHiYsBW4d25weKRFeaMa9uxLYVPnhxrDUgvQZCTwuZAGU4uw3pcid1CNZAheqGsoXth1eDoJR4SZAC4yu9ExXME9tv2znouBYnijGmfpYuTYuSDzk29Y4fxLpCf4l5mmy4zFUQZDZD"
-
-// curl -X POST -H "Content-Type: application/json" -d '{
-//   "setting_type" : "call_to_actions",
-//   "thread_state" : "existing_thread",
-//   "call_to_actions":[
-//     {
-//       "type":"postback",
-//       "title":"Random word",
-//       "payload":"RANDOM_WORD"
-//     },
-//     {
-//       "type":"postback",
-//       "title":"About Developer",
-//       "payload":"ABOUT_ME"
-//     },
-//   ]
-// }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAPZBXjOvZBmwBAHmK8fjjFnVsIury78jZA5ZBRfXHiYsBW4d25weKRFeaMa9uxLYVPnhxrDUgvQZCTwuZAGU4uw3pcid1CNZAheqGsoXth1eDoJR4SZAC4yu9ExXME9tv2znouBYnijGmfpYuTYuSDzk29Y4fxLpCf4l5mmy4zFUQZDZD
